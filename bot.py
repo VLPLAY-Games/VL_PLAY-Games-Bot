@@ -123,7 +123,7 @@ inlineKeyboardLanguage.add(
 
 @dp.message_handler(commands=['help'])
 async def help_command_reply(msg: types.Message):
-    await bot.send_message(msg.chat.id,"Bot creator - VL_PLAY" if user_language == "en"  else "Создатель бота - VL_PLAY")
+    await bot.send_message(msg.chat.id,"Bot creator - VL_PLAY Games" if user_language == "en"  else "Создатель бота - VL_PLAY Games")
 
 
 @dp.callback_query_handler(lambda call: True)
@@ -154,7 +154,7 @@ async def callback_message(call: types.CallbackQuery):
     elif call.data == "qlake_link":
         await bot.send_message(call.message.chat.id, "https://vl-play.itch.io/qlake")
     elif call.data == "qlake_sr":
-        await bot.send_message(call.message.chat.id, "Minimum \nCPU    i5-4690K and above \nRAM    4GB \n GPU    Vega 8 (gtx 750ti)  and above \nFree Space 9GB \nNote    1080p low ~ 30fps at different levels in different ways \n\nRecommended \nCPU    i5-8600k and above \nRAM    8GB \nGPU     Gtx 1660 and above \nFree Space 9GB \nNote 1080p ultra ~30fps at different levels in different ways" if user_language == "en" else "Минимум \nЦП i5-4690K и выше \nОЗУ 4 ГБ \n Графический процессор Vega 8 (gtx 750ti) и выше \nСвободное пространство 9 ГБ \nПримечание: 1080p низкая ~ 30 кадров в секунду на разных уровнях по-разному \n\nРекомендуется \nЦП i5-8600k и выше \ nRAM 8 ГБ \nGPU Gtx 1660 и выше \nСвободное пространство 9 ГБ \nNote 1080p Ultra ~30 кадров в секунду на разных уровнях по-разному")
+        await bot.send_message(call.message.chat.id, "Minimum \nCPU    i5-4690K and above \nRAM    4GB \n GPU    Gtx 750ti  and above \nFree Space 3GB \nNote    1080p very low ~ 30fps at different levels in different ways \n\nRecommended \nCPU    i5-8600k and above \nRAM    8GB \nGPU     Gtx 1660 and above \nFree Space 3GB \nNote 1080p ultra ~45fps at different levels in different ways" if user_language == "en" else "Минимум \nЦП i5-4690K и выше \nОЗУ 4 ГБ \n Графический процессор Gtx 750ti и выше \nСвободное пространство 3 ГБ \nПримечание: 1080p очень низкие ~ 30 кадров в секунду на разных уровнях по-разному \n\nРекомендуется \nЦП i5-8600k и выше \ nRAM 8 ГБ \nGPU Gtx 1660 и выше \nСвободное пространство 3 ГБ \nNote 1080p Ультра ~45 кадров в секунду на разных уровнях по-разному")
     elif call.data == "qlake_trailer":
         await bot.send_message(call.message.chat.id, "https://www.youtube.com/watch?v=E8vI3LdvRXk")
 
